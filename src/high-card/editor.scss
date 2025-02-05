@@ -1,0 +1,22 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.hard-card-container{
+	width: fit-content;
+	padding: 1em;
+	margin: auto; 
+	
+	figure,
+	.wp-block-image.aligncenter{
+		display: block;
+	}
+	
+	img{
+		width: auto;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}

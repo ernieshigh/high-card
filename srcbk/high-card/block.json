@@ -1,0 +1,68 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/high-card",
+	"version": "0.1.0",
+	"title": "High Card",
+	"category": "widgets",
+	"icon": "palmtree",
+	"description": "Create a custom card",
+	"example": {},		   
+	"supports": {
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"html": false,
+		"typography": {
+			"fontSize": true
+		},
+		"spacing":{
+				  "padding": true,
+			   "__experimentalDefaultControls": {
+					"padding": true
+				},
+				"margin": true
+			},
+			 "align": ["full", "wide"]
+	},
+	"attributes": {
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		},
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2"
+		},
+		
+			"imageAlt": {
+			"attribute": "alt",
+			"selector": ".card__image"
+		},
+			"imageUrl": {
+			"attribute": "src",
+			"selector": ".card__image"
+		},
+		
+		"align": {
+			"type": "string",
+			"default": "none"
+		},
+		"style": {
+			"type": "object",
+			"default": {
+				"spacing":{
+					"padding": true
+				}
+			}	
+		}
+	},
+	"textdomain": "high-card",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
